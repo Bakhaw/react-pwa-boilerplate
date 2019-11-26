@@ -14,15 +14,14 @@ class UpdateApp extends Component {
 
   render() {
     const { hasUpdate } = this.state;
+    const message = hasUpdate
+      ? 'A new update is available, please quit and restart the application'
+      : 'The application is now cached and ready to use offline';
+
     return (
-      <div>
-        {hasUpdate !== undefined &&
-          (hasUpdate ? (
-            <SnackBar message='A new update is available, please quit and restart the application' />
-          ) : (
-            <SnackBar message='The application is now cached and ready to use offline' />
-          ))}
-      </div>
+      <React.Fragment>
+        {hasUpdate !== undefined && <SnackBar message={message} />}
+      </React.Fragment>
     );
   }
 }
