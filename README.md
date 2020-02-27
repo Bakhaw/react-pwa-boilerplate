@@ -1,1 +1,1 @@
-## CS:GO - Nitro Stuffs
+## React PWA Boilerplate
